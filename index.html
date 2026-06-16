@@ -6,71 +6,224 @@
 
 <title>Sharma Vaishno Dhaba Since 1972 | Best Dhaba Near Katra & Mata Vaishno Devi</title>
 
-<meta name="description" content="Sharma Vaishno Dhaba Since 1972 is a famous pure vegetarian dhaba near Katra and Mata Vaishno Devi. Famous for Rajma Chawal, Paneer Pakoda, Tandoori Parathas and authentic North Indian meals.">
+<meta name="description" content="Sharma Vaishno Dhaba Since 1972 is a famous vegetarian dhaba near Katra and Mata Vaishno Devi. Known for Rajma Chawal, Paneer Pakoda, Tandoori Parathas and authentic North Indian meals.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#f8f8f8;
-color:#333;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#faf7f2;
+color:#222;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(8px);
+}
+
+.logo{
+color:white;
+font-size:24px;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#f7b733;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#f7b733;
 }
 
 .hero{
-color:white;
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),
+rgba(0,0,0,.55)),
+url("sharma vaishno.webp");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding:120px 20px;
-position:relative;
+padding:20px;
 }
-.hero h1,
-.hero h3,
-.hero p{
-text-shadow:2px 2px 6px black;
+
+.hero-content{
+max-width:900px;
+color:white;
+animation:fadeUp 1.2s ease;
 }
+
 .hero h1{
-font-size:48px;
-margin-bottom:10px;
+font-size:72px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.hero h1 span{
+color:#f7b733;
+}
+
+.hero h3{
+font-size:28px;
+font-weight:400;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
+font-size:22px;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .btn{
 display:inline-block;
-margin:10px;
-padding:12px 25px;
-background:white;
-color:#b71c1c;
+padding:15px 35px;
+border-radius:50px;
 text-decoration:none;
-font-weight:bold;
-border-radius:5px;
+font-weight:700;
+transition:.3s;
+}
+
+.primary{
+background:#b71c1c;
+color:white;
+}
+
+.primary:hover{
+transform:translateY(-3px);
+}
+
+.secondary{
+background:#f7b733;
+color:#111;
+}
+
+.secondary:hover{
+transform:translateY(-3px);
 }
 
 .section{
-padding:50px 20px;
-max-width:1100px;
-margin:auto;
+padding:100px 8%;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
+.section-title{
+text-align:center;
+font-size:48px;
+color:#b71c1c;
 margin-bottom:20px;
+font-weight:800;
 }
 
-h2{
+.section-sub{
+text-align:center;
+max-width:850px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+margin-bottom:60px;
+}
+
+.story{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.story img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.story-text h3{
+font-size:38px;
+margin-bottom:20px;
 color:#b71c1c;
 }
 
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:20px;
+.story-text p{
+font-size:18px;
+line-height:1.9;
+margin-bottom:15px;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:48px;
+}
+
+.hero h3{
+font-size:22px;
+}
+
+.story{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
 }
 
 </style>
@@ -78,157 +231,85 @@ padding:20px;
 
 <body>
 
-<div class="hero" style="
-background-image:url('sharma%20vaishno.webp');
-background-size:cover;
-background-position:center;
-">
-<h1>Sharma Vaishno Dhaba</h1>
+<nav>
+
+<div class="logo">
+SHARMA VAISHNO <span>DHABA</span>
+</div>
+
+<ul>
+<li><a href="#story">Our Story</a></li>
+<li><a href="#food">Food</a></li>
+<li><a href="#celebs">Guests</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+SHARMA VAISHNO DHABA
+<br>
+<span>SINCE 1972</span>
+</h1>
+
+<h3>50+ Years of Tradition, Taste & Hospitality</h3>
+
+<p>
+A legendary stop for travelers, pilgrims and food lovers near Katra & Mata Vaishno Devi.
+</p>
+
+<div class="buttons">
+
+<a href="tel:+919858336737" class="btn primary">
+Call Now
+</a>
+
+<a href="https://maps.google.com/?q=VXP4+4PM,Suketer+Katra+Domel" class="btn secondary" target="_blank">
+Get Directions
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="story">
+
+<h2 class="section-title">
+Our Story
+</h2>
+
+<p class="section-sub">
+Serving authentic vegetarian food with warmth and tradition for more than five decades.
+</p>
+
+<div class="story">
+
+<img src="sharma vaishno.webp">
+
+<div class="story-text">
+
 <h3>Since 1972</h3>
 
 <p>
-50+ Years of Tradition, Taste & Hospitality
-</p>
-
-<a class="btn" href="tel:+919858336737">Call Now</a>
-
-<a class="btn" href="tel:+918825030227">Call Alternate</a>
-</div>
-
-<div class="section">
-
-<div class="card">
-<h2>Welcome</h2>
-
-<p>
-A trusted stop for travelers visiting Katra and Mata Vaishno Devi for over 50 years.
+Sharma Vaishno Dhaba has been serving hot, wholesome and home-style vegetarian food since 1972.
 </p>
 
 <p>
-Known for authentic vegetarian food, warm hospitality and generous portions.
-</p>
-
-</div>
-<div class="card">
-
-<h2>Our Specialities</h2>
-
-<ul style="font-size:20px;line-height:2;">
-
-<li>🍛 Famous Rajma Chawal</li>
-
-<li>🧀 Signature Paneer Pakoda</li>
-
-<li>🔥 Fresh Tandoori Parathas</li>
-
-<li>🥘 Traditional North Indian Meals</li>
-
-<li>☕ Tea & Refreshments</li>
-
-</ul>
-
-<p>
-For over 50 years, travelers visiting Katra and Mata Vaishno Devi have stopped at Sharma Vaishno Dhaba for authentic vegetarian food and warm hospitality.
-</p>
-
-</div>
-  </p>
-
-</div>
-
-<div class="card">
-<h2>Food Gallery</h2>
-
-<img src="food dhaba.webp" width="100%" style="border-radius:10px;margin-bottom:15px;">
-
-<img src="unnamed.jpg" width="100%" style="border-radius:10px;margin-bottom:15px;">
-
-<img src="unnamed (1).jpg" width="100%" style="border-radius:10px;margin-bottom:15px;">
-
-<img src="unnamed (2).jpg" width="100%" style="border-radius:10px;margin-bottom:15px;">
-
-<p>
-Our famous Rajma Chawal, Paneer Pakoda, Tandoori Parathas and authentic North Indian meals have been loved by travelers and families for generations.
-</p>
-
-</div>
-<div class="card">
-
-<h2>Celebrity Visitors</h2>
-
-<img src="unnamed (3).jpg" width="100%" style="border-radius:10px;margin-bottom:15px;">
-
-
-<p>
-Over the years, Sharma Vaishno Dhaba has welcomed thousands of travelers, public figures, and distinguished guests who have enjoyed our hospitality and traditional vegetarian cuisine.
-</p>
-
-</div>
-  <div class="card">
-
-<h2>Contact & Location</h2>
-
-<p>
-📍 <strong>Address:</strong><br>
-VXP4+4PM, Suketer Katra Domel,<br>
-Chhurta, Domel,<br>
-Jammu & Kashmir 181224
+What began as a small roadside stop has become a trusted landmark for travelers visiting Katra and Mata Vaishno Devi.
 </p>
 
 <p>
-📞 <strong>Phone:</strong><br>
-+91 98583 36737<br>
-+91 88250 30227
+Known for Rajma Chawal, Paneer Pakoda, Tandoori Parathas and traditional North Indian meals, we continue to serve every guest with the same warmth and hospitality that started over 50 years ago.
 </p>
-
-<p>
-💳 UPI Accepted<br>
-🌐 Online Payments Accepted<br>
-💵 Cash Payments Accepted
-</p>
-
-<p>
-⭐ Serving Travelers Since 1972
-</p>
-<p>
-<a class="btn" href="https://maps.google.com/?q=VXP4+4PM,Suketer+Katra+Domel,Chhurta,Domel,Jammu+and+Kashmir+181224" target="_blank">
-Get Directions
-</a>
-</p>
-</div>
-  </div>
-
-<div class="card">
-
-<h2>Best Dhaba Near Katra & Mata Vaishno Devi</h2>
-
-<p>
-Sharma Vaishno Dhaba Since 1972 is one of the most trusted vegetarian dhabas near Katra and on the route frequented by travelers visiting Mata Vaishno Devi.
-</p>
-
-<p>
-Known for our famous Rajma Chawal, Paneer Pakoda, Tandoori Parathas and authentic North Indian meals, we have been serving families, pilgrims and travelers for more than 50 years.
-</p>
-
-<ul>
-<li>Best Dhaba Near Katra</li>
-<li>Best Dhaba Near Mata Vaishno Devi</li>
-<li>Vegetarian Dhaba Near Katra</li>
-<li>Rajma Chawal in Jammu</li>
-<li>Paneer Pakoda Near Katra</li>
-<li>Traditional North Indian Food in Jammu</li>
-</ul>
 
 </div>
 
 </div>
 
-<footer>
-</div>
-
-<footer>
-© Sharma Vaishno Dhaba Since 1972
-</footer>
-
-</body>
-</html>
+</section>
